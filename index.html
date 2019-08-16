@@ -8,34 +8,28 @@
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body onload="TimeNow()">
-		<div class="clock">
-			<p id="time"> </p>
-		</div>
-		<div class="progress"></div>
-
-
+	<div class="clock">
+		<p id="time"> </p>
+	</div>
 
 	<script>
 		require('./render.js');
 
-		function TimeNow()
-		{
-		let time__now = new Date();
-		let hours = time__now.getHours();
-		let minutes = time__now.getMinutes();
-		let seconds = time__now.getSeconds();
-		minutes=checkTime(minutes);
-		seconds=checkTime(seconds);
-		document.getElementById('time').innerHTML=hours+":"+minutes+":"+seconds;
-		t=setTimeout('TimeNow()',500);
+		function TimeNow() {
+			let time__now = new Date();
+			let hours = time__now.getHours();
+			let minutes = time__now.getMinutes();
+			let seconds = time__now.getSeconds();
+			minutes = checkTime(minutes);
+			seconds = checkTime(seconds);
+			document.getElementById('time').innerHTML = hours + ":" + minutes + ":" + seconds;
+			t=setTimeout('TimeNow()',500);
 		}
-		function checkTime(i)
-		{
-		if (i<10)
-		{
-		i="0" + i;
-		}
-		return i;
+		function checkTime(i) {
+			if (i < 10) {
+				i = "0" + i;
+			}
+			return i;
 		}
 	</script>
 </body>
