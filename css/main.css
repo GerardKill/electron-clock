@@ -5,28 +5,30 @@ body{
 }
 
 .clock{
-	position: absolute;
-    top: 30%;
-    left: 17%;
+	margin: 0 auto;
 }
 
 #time{
 	font-size: 100px;
-    color: #fff;
-  	font-family: Arvo;
   	font-weight: bold;
-  	text-shadow:
-    -3px -3px 0 #222,
-    3px -3px 0 #222,
-    -3px 3px 0 #222,
-    3px 3px 0 #222,
-    4px 4px 0 #fff,
-    5px 5px 0 #fff,
-    6px 6px 0 #fff,
-    7px 7px 0 #fff;
-  	line-height: 0.8em;
-  	letter-spacing: 0.1em;
-  	transform: scaleY(0.7);
-  	margin:0;
   	text-align: center;
+  	color: transparent;
+  	text-shadow: rgba(255,255,255,0.5) 0px 3px 3px;
+  	animation-name: flash;
+    animation-duration: 9s;
+    animation-timing-function: cubic-bezier(.26, 1, .93, .11);
+    animation-iteration-count: infinite;
+}
+
+@keyframes flash {
+  from,
+  50%,
+  to {
+    opacity: 1;
+  }
+
+  25%,
+  75% {
+    opacity: 0;
+  }
 }
