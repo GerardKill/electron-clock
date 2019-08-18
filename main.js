@@ -21,8 +21,6 @@ function createWindow() {
 		win = null;
 	})
 
-    // woopzz: why? O_O
-	// win.webContents.openDevTools();
 }
 
 app.on('ready', createWindow);
