@@ -18,6 +18,20 @@ body{
     animation-duration: 9s;
     animation-timing-function: cubic-bezier(.26, 1, .93, .11);
     animation-iteration-count: infinite;
+    margin-bottom: 0;
+}
+
+#data{
+	font-size: 25px;
+  	font-weight: bold;
+  	text-align: center;
+  	color: transparent;
+  	text-shadow: rgba(255,255,255,0.5) 0px 3px 3px;
+  	animation-name: flash;
+    animation-duration: 9s;
+    animation-timing-function: cubic-bezier(.26, 1, .93, .11);
+    animation-iteration-count: infinite;
+    margin-top: 0;
 }
 
 @keyframes flash {
