@@ -75,35 +75,7 @@ function DateNow() {
 		text__month = "December";
 		break;
 	}
+	let text__w__day = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
-	switch(w__day) {
-		case 0:
-		text__w__day = "Sunday";
-		break;
-
-		case 1:
-		text__w__day = "Monday";
-		break;
-
-		case 2:
-		text__w__day = "Tuesday";
-		break;
-
-		case 3:
-		text__w__day = "Wednesday";
-		break;
-
-		case 4:
-		text__w__day = "Thursday";
-		break;
-
-		case 5:
-		text__w__day = "Friday";
-		break;
-
-		case 6:
-		text__w__day = "Saturday";
-		break;
-	}
-	document.getElementById('data').innerHTML = text__w__day + ", " + text__month + " " + m__day + ", " + year;
+	document.getElementById('data').innerHTML = text__w__day[w__day] + ", " + text__month + " " + m__day + ", " + year;
 }
